@@ -1,0 +1,22 @@
+﻿<Window x:Class="lavb2vane.ListaCamiones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lavb2vane"
+        mc:Ignorable="d"
+        Title="ListaCamiones" Height="450" Width="800">
+    <Grid>
+        <ItemsControl x:Name="icCamiones">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock Text="{Binding PesoMaximo}" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Placa}"/>
+                        <TextBlock Text="{Binding PesoMinimo}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</Window>

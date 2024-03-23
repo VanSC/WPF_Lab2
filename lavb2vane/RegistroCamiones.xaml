@@ -1,0 +1,25 @@
+﻿<Window x:Class="lavb2vane.RegistroCamiones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lavb2vane"
+        mc:Ignorable="d"
+        Title="RegistroCamiones" Height="450" Width="800">
+    <Grid>
+
+        <StackPanel Margin="90">
+            <Label Content="Peso Maximo:"/>
+            <TextBox x:Name="txtPesoMax" Margin="0 0 0 10"/>
+
+            <Label Content="Placa:"/>
+            <TextBox x:Name="txtPlaca" Margin="0 0 0 10"/>
+
+            <Label Content="Peso vacio:"/>
+            <TextBox x:Name="txtPesoVacio" Margin="0 0 0 10"/>
+
+            <Button Content="Registrar" Click="Registrar_Click" HorizontalAlignment="Center" Margin="20"/>
+            <Button Content="Registrar" Click="Listar_Click" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>

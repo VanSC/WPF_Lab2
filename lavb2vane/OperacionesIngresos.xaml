@@ -1,0 +1,53 @@
+﻿<Window x:Class="lavb2vane.OperacionesIngresos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lavb2vane"
+        mc:Ignorable="d"
+        Title="OperacionesIngresos" Height="450" Width="800">
+    <Grid Margin="40">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="0 0 20 0">
+            <Label Content="Tipo de documento:" FontWeight="SemiBold"/>
+            <ComboBox x:Name="txtTipoDoc" Margin="0 0 0 10">
+                <ComboBoxItem Content="DNI"/>
+                <ComboBoxItem Content="Pasaporte"/>
+                <ComboBoxItem Content="Licencia de conducir"/>
+            </ComboBox>
+
+            <Label Content="Numero de documento:" FontWeight="SemiBold"/>
+            <TextBox x:Name="txtNumDoc" Margin="0 0 0 10"/>
+
+            <Label Content="Peso:" FontWeight="SemiBold"/>
+            <TextBox x:Name="txtPeso" Margin="0 0 0 10"/>
+
+            <Label Content="TipoAuto:" FontWeight="SemiBold"/>
+            <PasswordBox x:Name="txtTipoAuto" Margin="0 0 0 10"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="20 0 0 0">
+            <Label Content="Nombre Transportista:"/>
+            <TextBox x:Name="txtNombre" Margin="0 0 0 10"/>
+
+            <Label Content="Fecha y Hora:"/>
+            <DatePicker></DatePicker>
+
+            <Label Content="Peso Ingreso:"/>
+            <TextBox x:Name="txtPesoIngreso" Margin="0 0 0 10"/>
+
+            <Label Content="Peso Salida:"/>
+            <TextBox x:Name="txtPesoSalida" Margin="0 0 0 10"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20">
+                <Button Content="Aceptar" Width="100" Margin="0 10 4 0" Click="RegistroSalida_Click"/>
+                <Button Content="Cancelar" Width="100" Margin="0 10 4 0" Click="back_click"/>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Window>
